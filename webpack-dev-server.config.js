@@ -20,7 +20,8 @@ const config = {
     port: 8080, // Port Number
     host: 'localhost', // Change to '0.0.0.0' for external facing server
   },
-  devtool: 'eval',
+  // devtool: 'eval',
+  devtool: 'cheap-module-inline-source-map',
   output: {
     path: buildPath, // Path of output file
     filename: 'app.js',

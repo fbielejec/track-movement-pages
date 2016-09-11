@@ -5,11 +5,14 @@
 //---MODULE IMPORTS---//
 
 import React, {PropTypes, Component} from 'react'
+// import AppBar from 'material-ui/AppBar';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import Drawer from 'material-ui/Drawer';
 import {Drawer, AppBar, MenuItem} from 'material-ui'
-import { RouteHandler } from 'react-router';
+// <MuiThemeProvider muiTheme={getMuiTheme(baseTheme)}>
+//      </MuiThemeProvider>
 
 //---MODULE EXPORTS---//
 
