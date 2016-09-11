@@ -5,14 +5,11 @@
 //---MODULE IMPORTS---//
 
 import React, {PropTypes, Component} from 'react'
-// import AppBar from 'material-ui/AppBar';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import Drawer from 'material-ui/Drawer';
 import {Drawer, AppBar, MenuItem} from 'material-ui'
-// <MuiThemeProvider muiTheme={getMuiTheme(baseTheme)}>
-//      </MuiThemeProvider>
+import {Link} from 'react-router'
 
 //---MODULE EXPORTS---//
 
@@ -48,13 +45,15 @@ class Main extends Component {
         return (
             <div>
                 <Drawer docked={false} open={this.state.open}>
-                    <MenuItem onTouchTap={this.handleClose}>About</MenuItem>
+                    <MenuItem containerElement={<Link to="/about" />} onTouchTap={this.handleClose}>About</MenuItem>
                     <MenuItem onTouchTap={this.handleClose}>Connecting</MenuItem>
                     <MenuItem onTouchTap={this.handleClose}>Example code</MenuItem>
                     <MenuItem onTouchTap={this.handleClose}>Download</MenuItem>
                 </Drawer>
 
                 <AppBar title="Track Movement" onLeftIconButtonTouchTap={this.handleToggle} />
+
+               {this.props.children}
 
             </div>
         );

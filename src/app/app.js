@@ -21,5 +21,3 @@ const routes = (
 )
 
 ReactDOM.render(routes, document.getElementById('app'))
-
-// ReactDOM.render(<Main />, document.getElementById('app'));
