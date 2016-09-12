@@ -1,1 +1,1 @@
-web: npm i && npm run dist && npm run heroku
+web: npm run dist && npm run heroku
