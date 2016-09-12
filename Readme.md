@@ -1,10 +1,21 @@
+# Track-Movement
 
-deploy
+> Hardware project description written in React + Material UI, deployed on Heroku.
 
-heroku config:set NPM_CONFIG_PRODUCTION=false
+Version: 0.0.1, 2016 <br />
+Visit [the latest stable version](https://trackmovement.herokuapp.com/) <br/>
 
-git push heroku master
+## Deploy
 
-heroku open
+```sh
+$ heroku config:set NPM_CONFIG_PRODUCTION=false
+$ git push heroku master
+$ heroku open
+```
 
-https://trackmovement.herokuapp.com/
+## Develop
+
+```sh
+$ npm i
+$ npm start
+```
