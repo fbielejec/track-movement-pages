@@ -42,18 +42,24 @@ class Connecting extends Component {
 
     constructor(props) {
         super(props);
+
+        this.handleZoom = this.handleZoom.bind(this);
     }
+
+handleZoom(tile) {
+    // open a Dialog with big image
+console.log( tile);
+}
 
     render() {
         return (
             <div style={styles.root}>
                 <GridList cellHeight={200} style={styles.gridList}>
-                    {tilesData.map((tile) => (
+                    {tilesData.map((tile,  i) => (
                         <GridTile
                              key={tile.img}
                              title={tile.text}
-                             subtitle={tile.text}
-                             actionIcon={<IconButton > <StarBorder color="white"/> </IconButton>}>
+                             actionIcon={<IconButton onTouchTap={this.handleZoom.bind(this, tile)}> <StarBorder color="white"/> </IconButton>}>
                             <img src={tile.img}/>
                         </GridTile>
                     ))}
