@@ -45,15 +45,16 @@ class Main extends Component {
         return (
             <div>
                 <Drawer docked={false} open={this.state.open}>
-                    <MenuItem containerElement={<Link to="/about" />} onTouchTap={this.handleClose}>About</MenuItem>
-                    <MenuItem containerElement={<Link to="/connecting" />} onTouchTap={this.handleClose}>Connecting</MenuItem>
-                    <MenuItem containerElement={<Link to="/example" />} onTouchTap={this.handleClose}>Example code</MenuItem>
-                    <MenuItem containerElement={<Link to="/download" />} onTouchTap={this.handleClose}>Download</MenuItem>
+                    <MenuItem containerElement={< Link to = "/about" />} onTouchTap={this.handleClose}>About</MenuItem>
+                    <MenuItem containerElement={< Link to = "/connecting" />} onTouchTap={this.handleClose}>Connecting</MenuItem>
+                    <MenuItem containerElement={< Link to = "/example" />} onTouchTap={this.handleClose}>Example code</MenuItem>
+                    <MenuItem containerElement={< Link to = "/download" />} onTouchTap={this.handleClose}>Download</MenuItem>
                 </Drawer>
 
-                <AppBar title="Track Movement" onLeftIconButtonTouchTap={this.handleToggle} />
-
-               {this.props.children}
+                <AppBar title="Track Movement" onLeftIconButtonTouchTap={this.handleToggle}/>
+                <div>
+                    {this.props.children}
+                </div>
 
             </div>
         );
